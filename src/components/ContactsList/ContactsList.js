@@ -1,10 +1,11 @@
 import { Contact } from 'components/Contact/Contact';
 import { ListWithContacts } from './ContactsList.styled';
 import { useSelector } from 'react-redux';
-import { selectVisibleContacts } from 'redux/selectors';
+import { selectVisibleContacts } from 'redux/contacts/selectors';
 
 export const ContactsList = () => {
   const visibleContacts = useSelector(selectVisibleContacts);
+
   return (
     <ListWithContacts>
       {visibleContacts.map(contact => (
