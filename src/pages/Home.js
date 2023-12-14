@@ -1,7 +1,9 @@
+import { WelcomePageTitle } from 'components/App/GlobalStyle';
+
 export default function Home() {
   return (
     <div>
-      <h1>Phonebook welcome page</h1>
+      <WelcomePageTitle>Phonebook welcome page</WelcomePageTitle>
     </div>
   );
 }

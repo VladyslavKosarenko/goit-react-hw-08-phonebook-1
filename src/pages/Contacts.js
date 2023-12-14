@@ -2,11 +2,11 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Helmet } from 'react-helmet';
 import { selectError, selectIsLoading } from 'redux/contacts/selectors';
-import { GlobalStyle } from 'GlobalStyle';
 import { fetchContacts } from 'redux/contacts/operations';
 import { ContactForm } from 'components/ContactForm/ContactForm';
 import { ContactsList } from 'components/ContactsList/ContactsList';
 import { Filter } from 'components/Filter/Filter';
+import { ContactsListTitle, PhonebookTitle } from 'components/App/GlobalStyle';
 
 export default function Contacts() {
   const dispatch = useDispatch();
@@ -22,13 +22,12 @@ export default function Contacts() {
       <Helmet>
         <title>Your tasks</title>
       </Helmet>
-      <h1>Your Phonebook</h1>
+      <PhonebookTitle>Your Phonebook</PhonebookTitle>
       <ContactForm />
-      <h2>Contacts</h2>
+      <ContactsListTitle>Contacts</ContactsListTitle>
       <Filter />
       {isLoading && !error && <b>Request in progress...</b>}
       <ContactsList />
-      <GlobalStyle />
     </>
   );
 }

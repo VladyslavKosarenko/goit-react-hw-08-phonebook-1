@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { addContact } from 'redux/contacts/operations';
 import { selectContacts } from 'redux/contacts/selectors';
+import { Form, InputForm, SubmitButton } from './ContactForm.styled';
 
 export const ContactForm = () => {
   const dispatch = useDispatch();
@@ -29,11 +30,11 @@ export const ContactForm = () => {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
-        <input type="text" name="name" placeholder="Enter name" />
-        <input type="tel" name="number" placeholder="Enter phone number" />
-        <button type="submit">Add Contact</button>
-      </form>
+      <Form onSubmit={handleSubmit}>
+        <InputForm type="text" name="name" placeholder="Enter name" />
+        <InputForm type="tel" name="number" placeholder="Enter phone number" />
+        <SubmitButton type="submit">Add Contact</SubmitButton>
+      </Form>
     </div>
   );
 };

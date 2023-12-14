@@ -12,6 +12,14 @@ export const ContactItem = styled.li`
   padding: 10px 20px;
 
   border-radius: 10px;
+
+  max-width: 320px;
+  width: 100%;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  background-color: white;
 `;
 
 export const ContactItemContainer = styled.div`
@@ -31,6 +39,8 @@ export const DeleteButton = styled.button`
 
   transform: scale(1);
   transition: transform 250ms ease-in-out;
+
+  cursor: pointer;
 
   &:hover,
   &:focus {

@@ -1,14 +1,22 @@
-import {
-  Form as FormikForm,
-  Field as FormikField,
-  ErrorMessage as FormikError,
-} from 'formik';
 import styled from 'styled-components';
 
-export const Form = styled(FormikForm)`
+export const Form = styled.form`
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 15px;
+`;
+
+export const InputForm = styled.input`
+  max-width: 280px;
+  width: 100%;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  height: 40px;
+
+  border-radius: 5px;
+  border: none;
 `;
 
 export const FormGroup = styled.label`
@@ -17,35 +25,28 @@ export const FormGroup = styled.label`
   gap: 5px;
 `;
 
-export const Field = styled(FormikField)`
-  max-width: 200px;
-  margin-bottom: 10px;
-  padding: 5px;
-`;
-
 export const SubmitButton = styled.button`
-  max-width: 208px;
-
+  max-width: 220px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   color: #fff;
 
   padding: 10px;
   border-radius: 20px;
   border: none;
-  background-color: DeepSkyBlue;
+  background-color: green;
 
   transform: scale(1);
   transition: transform 250ms ease-in-out;
+
+  margin-bottom: 30px;
+
+  cursor: pointer;
 
   &:hover,
   &:focus {
     transform: scale(1.2);
     transition: transform 250ms ease-in-out;
   }
-`;
-
-export const ErrorMessage = styled(FormikError)`
-  color: red;
-  margin: 0;
-  text-align: center;
-  margin-bottom: 10px;
 `;
