@@ -35,7 +35,7 @@ export const DeleteButton = styled.button`
 
   padding: 5px 10px;
   border: none;
-  background-color: crimson;
+  background-color: #c64b41;
 
   transform: scale(1);
   transition: transform 250ms ease-in-out;

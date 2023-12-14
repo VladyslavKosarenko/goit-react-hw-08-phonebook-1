@@ -35,7 +35,7 @@ export const SubmitButton = styled.button`
   padding: 10px;
   border-radius: 20px;
   border: none;
-  background-color: green;
+  background-color: #729d68;
 
   transform: scale(1);
   transition: transform 250ms ease-in-out;
